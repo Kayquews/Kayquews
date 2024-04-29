@@ -1,3 +1,8 @@
+## Estatísticas do GitHub
+
+![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=kayquews&show_icons=true&theme=dark)
+
+
 
 - 👋 Hi, I’m @Kayquews
 - 
