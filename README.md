@@ -48,7 +48,7 @@
 | Python     | ⭐                   |
 
 - 📫 How to reach me ...
-- | [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/qr/H5DTOMEAHH7YC1) | [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_kayquexf?igsh=dnc2cWk5dzZ2eGZi) |
+-  [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/qr/H5DTOMEAHH7YC1)  [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/_kayquexf?igsh=dnc2cWk5dzZ2eGZi) 
 
 
 <!---
