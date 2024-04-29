@@ -28,8 +28,14 @@
 
 
 </svg>
-- 
-- 👀 I’m interested in ...
+- ## I’m interested in
+
+| Tecnologia |  |
+|------------|-----------------------|
+| HTML       |              |
+| CSS        |                |
+| JavaScript |                   |
+| Python     |                    |
 - 🌱 I’m currently learning ...
 
 - ## Barra de Aprendizado
