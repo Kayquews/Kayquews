@@ -5,11 +5,12 @@
 
 
 - 👋 Hi, I’m @Kayquews
-- <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="github-snake.svg" />
-  <img alt="github-snake" src="github-snake.svg" />
-</picture>
+- <svg width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="40" fill="green">
+    <animate attributeName="r" from="40" to="50" dur="1s" repeatCount="indefinite" />
+  </circle>
+</svg>
+
 -🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩
 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩
 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩
