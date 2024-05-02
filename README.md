@@ -3,6 +3,19 @@
 ![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=kayquews&show_icons=true&theme=dark)
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=kayquews&show_icons=true&theme=synthwave)
 
+<span style="animation: pulse 1s infinite;">kayquews</span>
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 - 👋 Hi, I’m @Kayquews
 - 
