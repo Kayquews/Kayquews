@@ -16,7 +16,6 @@
     transform: scale(1);
   }
 }
-
 - 👋 Hi, I’m @Kayquews
 - 
 
