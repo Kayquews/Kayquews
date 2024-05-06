@@ -9,7 +9,6 @@
 
 ## Estatísticas do GitHub
 
-![Estatísticas do GitHub](https://github-readme-stats.vercel.app/api?username=kayquews&show_icons=true&theme=dark)
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=kayquews&show_icons=true&theme=synthwave)
 
 <span style="animation: pulse 1s infinite;">kayquews</span>
