@@ -14,16 +14,6 @@
 
 <span style="animation: pulse 1s infinite;">kayquews</span>
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 - 👋 Hi, I’m @Kayquews
 - 
