@@ -7,9 +7,7 @@ teste 2
 
 <span style="animation: pulse 1s infinite;">kayquews</span>
 
-}
-- 👋 Hi, I’m @Kayquews
-- tudo bem com vocês ?
+teste
 
 
 
