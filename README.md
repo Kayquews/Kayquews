@@ -5,7 +5,7 @@
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=kayquews&show_icons=true&theme=synthwave)
 
-
+1
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Um+Mundo+Melhor+Para+Todos)](https://git.io/typing-svg)
 
