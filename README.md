@@ -7,7 +7,7 @@ teste 1
 
 <span style="animation: pulse 1s infinite;">kayquews</span>
 
-}
+
 - 👋 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&width=435&lines=Um+Futuro+Melhor+Para+Todos)](https://git.io/typing-svg) 
 
 
