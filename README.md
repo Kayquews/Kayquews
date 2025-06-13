@@ -45,9 +45,8 @@ const skills = [
 
 ## Contato
 
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-181717?style=flat&logo=linkedin)](https://linkedin.com/in/seulinkedin)
-[![Instagram](https://img.shields.io/badge/-Instagram-181717?style=flat&logo=instagram)](https://instagram.com/seuusuario)
-[![Gmail](https://img.shields.io/badge/-Gmail-181717?style=flat&logo=gmail)](mailto:seuemail@email.com)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-181717?style=flat&logo=linkedin)](https://linkedin.com/in/kayquews)
+[![Instagram](https://img.shields.io/badge/-Instagram-181717?style=flat&logo=instagram)](https://instagram.com/kayquews)
 
 ---
 
@@ -58,7 +57,7 @@ const skills = [
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Kayquews&show_icons=true&theme=radical" width="400"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Kayquews&show_icons=true&theme=radical" width="500"/>
 </p>
 
 ---
