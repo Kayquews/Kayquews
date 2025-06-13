@@ -52,8 +52,6 @@ const skills = [
 
 ## Snake das Contribuições
 
-Veja abaixo uma animação divertida mostrando o rastro das minhas contribuições no GitHub ao longo do tempo:
-
 <p align="center">
   <img src="./output/github-contribution-grid-snake.svg" alt="snake gif" />
 </p>
