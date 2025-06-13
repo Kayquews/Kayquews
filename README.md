@@ -1,4 +1,4 @@
-# Oieee, seja bem-vindo(a) 👋
+# Oie, seja bem-vindo(a) 👋
 
 <p align="left">
   <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="220" alt="Ralph acenando dos Simpsons" align="right" style="background:#22242a; border-radius:12px;"/>
