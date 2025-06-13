@@ -2,7 +2,7 @@ name: Generate Snake
 
 on:
   schedule:
-    - cron: "0 0 * * *" # roda todo dia à meia-noite UTC
+    - cron: "0 0 * * *"         # Roda todo dia à meia-noite UTC
   workflow_dispatch:
 
 jobs:
@@ -18,10 +18,9 @@ jobs:
           github_user_name: Kayquews
           outputs: |
             ./output/github-contribution-grid-snake.svg
-          color_snake: true
-          color_dots: true
-          transparent: true
-          size: 1024
+          snake_color: "#1e90ff"       # Cor azul da cobra
+          snake_speed: 5               # Velocidade dobrada (padrão é 1, pode aumentar mais se quiser)
+          # Você pode trocar snake_color para outras cores, ex: "#ff0000" (vermelho), "#00ff00" (verde), etc.
 
       - name: Commit and push
         uses: EndBug/add-and-commit@v9
