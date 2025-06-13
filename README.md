@@ -4,7 +4,7 @@
   <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="220" alt="Ralph acenando dos Simpsons" align="right" style="background:#22242a; border-radius:12px;"/>
 </p>
 
-- 🔭 Desenvolvedor apaixonado por tecnologia!
+- 🔭 Sou um desenvolvedor apaixonado por tecnologia!
 - 😄 Pronome: ele/dele kayqueWs
 - ⚡ Fun fact: Adoro memes e café! ☕
 - 🌱 Atualmente aprendendo mais sobre desenvolvimento web e mobile.
