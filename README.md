@@ -1,4 +1,3 @@
-
 # Oieee, seja bem-vindo(a) 👋
 
 <p align="left">
@@ -22,6 +21,7 @@
   <img src="https://img.shields.io/badge/-Node.js-333?style=flat&logo=node.js" />
   <img src="https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5" />
   <img src="https://img.shields.io/badge/-CSS3-333?style=flat&logo=css3" />
+  <img src="https://img.shields.io/badge/-Git%20da%20Cobra-333?style=flat&logo=github" />
   <!-- Adicione outras badges conforme desejar -->
 </p>
 
@@ -32,7 +32,8 @@ const skills = [
   "React",
   "Node.js",
   "HTML5",
-  "CSS3"
+  "CSS3",
+  "Git da Cobra"
 ];
 ```
 
@@ -53,6 +54,4 @@ const skills = [
 ---
 
 
-<div align="center">
-  <img src="https://raw.githubusercontent.com/Kayquews/Kayquews/output/github-contribution-grid-snake.svg" alt="snake game" />
-</div>
+
