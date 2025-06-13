@@ -4,7 +4,7 @@
   <img src="https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif" width="220" alt="Ralph acenando dos Simpsons" align="right" style="background:#22242a; border-radius:12px;"/>
 </p>
 
-- 🔭 Desenvolvedor(a) apaixonado(a) por tecnologia!
+- 🔭 Desenvolvedor apaixonado por tecnologia!
 - 😄 Pronome: ele/dele kayqueWs
 - ⚡ Fun fact: Adoro memes e café! ☕
 - 🌱 Atualmente aprendendo mais sobre desenvolvimento web e mobile.
@@ -57,7 +57,7 @@ const skills = [
 ## Estatísticas do GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Kayquews&show_icons=true&theme=radical" width="100"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Kayquews&show_icons=true&theme=radical" width="300"/>
 </p>
 
 ---
