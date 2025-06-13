@@ -54,5 +54,5 @@ const skills = [
 
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Platane/snk/output/github-contribution-grid-snake.svg" alt="snake game" />
+  <img src="https://raw.githubusercontent.com/Kayquews/Kayquews/output/github-contribution-grid-snake.svg" alt="snake game" />
 </div>
