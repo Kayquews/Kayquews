@@ -5,10 +5,14 @@
 </p>
 
 - 🔭 Desenvolvedor(a) apaixonado(a) por tecnologia!
-- 🌱 Aprendendo novas ferramentas todos os dias.
-- 😄 Pronome: ele/dele ou ela/dela (troque pelo seu)
-- 💬 Pergunte-me sobre programação, GitHub, carreira dev.
+- 😄 Pronome: ele/dele kayqueWs
 - ⚡ Fun fact: Adoro memes e café! ☕
+- 🌱 Atualmente aprendendo mais sobre desenvolvimento web e mobile.
+- 💬 Pergunte-me sobre JavaScript, Python e React!
+
+## Sobre mim
+Sou um desenvolvedor(a) entusiasta, sempre em busca de aprender e compartilhar conhecimento.
+Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte dessa mudança. Gosto de trabalhar em equipe e adoro desafios que me fazem crescer.
 
 ---
 
