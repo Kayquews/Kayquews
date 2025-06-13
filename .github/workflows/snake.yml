@@ -18,6 +18,10 @@ jobs:
           github_user_name: Kayquews
           outputs: |
             ./output/github-contribution-grid-snake.svg
+          color_snake: true
+          color_dots: true
+          transparent: true
+          size: 1024
 
       - name: Commit and push
         uses: EndBug/add-and-commit@v9
