@@ -19,7 +19,7 @@ jobs:
           outputs: |
             ./output/github-contribution-grid-snake.svg
           snake_color: "#1e90ff"       # Cor azul da cobra
-          snake_speed: 4               # Velocidade dobrada (padrão é 1, pode aumentar mais se quiser)
+          snake_speed: 5               # Velocidade dobrada (padrão é 1, pode aumentar mais se quiser)
           # Você pode trocar snake_color para outras cores, ex: "#ff0000" (vermelho), "#00ff00" (verde), etc.
 
       - name: Commit and push
