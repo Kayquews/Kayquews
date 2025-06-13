@@ -40,7 +40,9 @@ const skills = [
   "Git da Cobra"
 ];
 ```
-
+<p align="center">
+  <img src="./output/github-contribution-grid-snake.svg" alt="snake gif" />
+</p>
 ---
 
 ## Contato
