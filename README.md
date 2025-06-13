@@ -11,7 +11,7 @@
 - 💬 Pergunte-me sobre JavaScript, Python e React!
 
 ## Sobre mim
-Sou um desenvolvedor(a) entusiasta, sempre em busca de aprender e compartilhar conhecimento.
+Sou um desenvolvedor entusiasta, sempre em busca de aprender e compartilhar conhecimento.
 Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte dessa mudança. Gosto de trabalhar em equipe e adoro desafios que me fazem crescer.
 
 ---
