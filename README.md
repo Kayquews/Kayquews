@@ -41,7 +41,7 @@ const skills = [
 ```
 ## Snake das Contribuições
 <p align="center" style="background:#22242a; border-radius:12px;" >
-  <img src="./github-user-contribution.svg" alt="snake gif" width="800"/>
+  <img src="./output/github-contribution-grid-snake.svg" alt="snake gif" width="800"/>
 </p>
 
 
