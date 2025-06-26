@@ -25,10 +25,7 @@ Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte
   <img src="https://img.shields.io/badge/-Node.js-333?style=flat&logo=node.js" />
   <img src="https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5" />
   <img src="https://img.shields.io/badge/-CSS3-333?style=flat&logo=css3" />
-  <img src="https://img.shields.io/badge/-Git%20da%20Cobra-333?style=flat&logo=github" />
-  <!-- Adicione outras badges conforme desejar -->
-</p>
-
+ 
 ```js
 const skills = [
   "JavaScript",
