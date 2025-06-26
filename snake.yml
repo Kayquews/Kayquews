@@ -19,7 +19,7 @@ jobs:
           outputs: |
             ./output/github-contribution-grid-snake.svg
           snake_color: "#1e90ff"       # Cor azul da cobra
-          snake_speed: 10              # Velocidade aumentada (padrão é 1)
+          snake_speed: 40              # Velocidade aumentada (padrão é 1)
           food_label: "dev kayquews"   # Texto que aparece quando a cobra come
           # Você pode trocar snake_color para outras cores, ex: "#ff0000" (vermelho), "#00ff00" (verde), etc.
 
