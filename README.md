@@ -28,7 +28,7 @@ equipe e adoro desafios que me fazem crescer.
 > 
 
 <p>
-    <img src="Img/avatar%20(1).svg" height="80">
+    <img src="Img/avatar%20(1).svg">
 </p>
 
 ## Tools I know
