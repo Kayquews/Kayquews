@@ -1,6 +1,7 @@
 <p align="center">
   <img src="Img/avatar.svg" width="220" alt="Desenvolvedor no escuro" align="center" style="background:#22242a; border-radius:12px;"/>
 </p>
+
 # Oie, seja bem-vindo(a) 👋
 
 
