@@ -21,9 +21,12 @@ Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte
 equipe e adoro desafios que me fazem crescer.
 
 ---
-
-<img src="Img/avatar%20(1).svg" width="80" alt="Desenvolvedor no escuro"  align="right" style="background:#22242a; border-radius:12px;" >
-
+>
+>
+>
+>
+<img src="Img/avatar%20(1).svg" height="50">
+> 
 ## Tools I know
 
 <p align="left">
