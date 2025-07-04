@@ -28,7 +28,7 @@ equipe e adoro desafios que me fazem crescer.
 </p>
 
 
-<p align="left">
+<p>
   <img src="https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript" />
   <img src="https://img.shields.io/badge/-Python-333?style=flat&logo=python" />
   <img src="https://img.shields.io/badge/-React-333?style=flat&logo=react" />
