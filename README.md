@@ -9,7 +9,7 @@
 
 
 - 🔭 Sou um desenvolvedor apaixonado por tecnologia!
-- 😄 Pronome: ele/dele kayqueWs
+- 😄 Pronome: ele/dele KayqueWs
 - ⚡ Fun fact: Adoro memes e café! ☕
 - 🌱 Atualmente aprendendo mais sobre desenvolvimento web e mobile.
 - 💬 Pergunte-me sobre JavaScript, Python e React!
@@ -21,6 +21,8 @@ Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte
 equipe e adoro desafios que me fazem crescer.
 
 ---
+
+<img src="Img/avatar%20(1).svg" width="220" alt="Desenvolvedor no escuro"  align="right" style="background:#22242a; border-radius:12px;" >
 
 ## Tools I know
 
