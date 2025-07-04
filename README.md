@@ -26,12 +26,29 @@ equipe e adoro desafios que me fazem crescer.
 
 
 <p align="left">
-  <img src="https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript" />
-  <img src="https://img.shields.io/badge/-Python-333?style=flat&logo=python" />
-  <img src="https://img.shields.io/badge/-React-333?style=flat&logo=react" />
-  <img src="https://img.shields.io/badge/-Node.js-333?style=flat&logo=node.js" />
-  <img src="https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5" />
-  <img src="https://img.shields.io/badge/-CSS3-333?style=flat&logo=css3" />
+
+<p align="left">
+  <img src="Img/ai-robot-assistant.gif" width="220" alt="Desenvolvedor no escuro" align="right" style="background:#22242a; border-radius:12px;"/>
+</p>
+ <div class="badge-wrapper" align="left">
+  <img src="https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript"/>
+</div>
+<div>
+  <img src="https://img.shields.io/badge/-Python-333?style=flat&logo=python" /> 
+</div>
+
+ <div>
+<img src="https://img.shields.io/badge/-React-333?style=flat&logo=react" />
+</div>
+ <div> 
+<img src="https://img.shields.io/badge/-Node.js-333?style=flat&logo=node.js"/>
+</div>
+  <div>
+<img src="https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5" />
+</div>
+  <div>
+<img src="https://img.shields.io/badge/-CSS3-333?style=flat&logo=css3" />
+</div>
  
 ```js
 const skills = [
