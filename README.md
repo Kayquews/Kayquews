@@ -4,7 +4,7 @@
 .
 
 <p align="left">
-  <img src="Img/avatar.svg" width="220" alt="Desenvolvedor no escuro" align="right" style="background:#22242a; border-radius:12px;"/>
+  <img src="Img/ai-robot-assistant.gif" width="220" alt="Desenvolvedor no escuro" align="right" style="background:#22242a; border-radius:12px;"/>
 </p>
 
 - 🔭 Sou um desenvolvedor apaixonado por tecnologia!
