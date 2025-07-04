@@ -1,7 +1,10 @@
 # Oie, seja bem-vindo(a) 👋
 
+
+.
+
 <p align="left">
-  <img src="https://media.giphy.com/media/f3iwJFOVOwuy7K6FFw/giphy.gif" width="220" alt="Desenvolvedor no escuro" align="right" style="background:#22242a; border-radius:12px;"/>
+  <img src="Img/avatar.svg" width="220" alt="Desenvolvedor no escuro" align="right" style="background:#22242a; border-radius:12px;"/>
 </p>
 
 - 🔭 Sou um desenvolvedor apaixonado por tecnologia!
@@ -11,8 +14,10 @@
 - 💬 Pergunte-me sobre JavaScript, Python e React!
 
 # Sobre mim[.idea](.idea)
+
 Sou um desenvolvedor entusiasta, sempre em busca de aprender e compartilhar conhecimento.
-Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte dessa mudança. Gosto de trabalhar em equipe e adoro desafios que me fazem crescer.
+Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte dessa mudança. Gosto de trabalhar em
+equipe e adoro desafios que me fazem crescer.
 
 ---
 
@@ -31,15 +36,17 @@ Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte
 
 ```js
 const skills = [
-  "JavaScript",
-  "Python",
-  "React",
-  "Node.js",
-  "HTML5",
-  "CSS3",
+    "JavaScript",
+    "Python",
+    "React",
+    "Node.js",
+    "HTML5",
+    "CSS3",
 ];
 ```
+
 ## Snake das Contribuições
+
 <p align="center" style="background:#22242a; border-radius:12px;" >
   <img src="./output/github-contribution-grid-snake.svg" alt="snake gif" width="800"/>
 </p>
