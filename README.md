@@ -3,9 +3,6 @@
 
 .
 
-<p align="left">
-  <img src="Img/ai-robot-assistant.gif" width="220" alt="Desenvolvedor no escuro" align="right" style="background:#22242a; border-radius:12px;"/>
-</p>
 
 - 🔭 Sou um desenvolvedor apaixonado por tecnologia!
 - 😄 Pronome: ele/dele kayqueWs
@@ -22,6 +19,11 @@ equipe e adoro desafios que me fazem crescer.
 ---
 
 ## Tools I know
+
+<p align="left">
+  <img src="Img/ai-robot-assistant.gif" width="220" alt="Desenvolvedor no escuro" align="right" style="background:#22242a; border-radius:12px;"/>
+</p>
+
 
 <p align="left">
   <img src="https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript" />
