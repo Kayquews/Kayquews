@@ -25,8 +25,12 @@ equipe e adoro desafios que me fazem crescer.
 >
 >
 >
-<img src="Img/avatar%20(1).svg" height="50">
 > 
+
+<p>
+    <img src="Img/avatar%20(1).svg" height="80">
+</p>
+
 ## Tools I know
 
 <p align="left">
@@ -56,7 +60,7 @@ const skills = [
 ## Snake das Contribuições
 
 <p align="center" style="background:#22242a; border-radius:12px;" >
-  <img src="./output/github-contribution-grid-snake.svg" alt="snake gif" width="800"/>
+  <img src="./output/github-contribution-grid-snake.svg" alt="snake gif" width="800" align="right"/>
 </p>
 
 
@@ -72,7 +76,7 @@ const skills = [
 ## Estatísticas do GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Kayquews&show_icons=true&theme=radical" width="300"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Kayquews&show_icons=true&theme=radical" width="300" align=""/>
 </p>
 
 ---
