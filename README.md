@@ -76,7 +76,7 @@ const skills = [
 ## Estatísticas do GitHub
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Kayquews&show_icons=true&theme=radical" width="300" align=""/>
+  <img src="https://github-readme-stats.vercel.app/api?username=Kayquews&show_icons=true&theme=radical" width="300" align="right"/>
 </p>
 
 ---
