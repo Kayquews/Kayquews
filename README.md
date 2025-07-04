@@ -22,7 +22,7 @@ equipe e adoro desafios que me fazem crescer.
 
 ---
 
-<img src="Img/avatar%20(1).svg" width="220" alt="Desenvolvedor no escuro"  align="right" style="background:#22242a; border-radius:12px;" >
+<img src="Img/avatar%20(1).svg" width="80" alt="Desenvolvedor no escuro"  align="right" style="background:#22242a; border-radius:12px;" >
 
 ## Tools I know
 
