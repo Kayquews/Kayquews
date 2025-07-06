@@ -1,0 +1,258 @@
+---
+name: Release Management
+description: Gerencia releases e versionamento semântico
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: 'Tipo de release'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    name: Create Release
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          npm install -g semantic-release @semantic-release/changelog @semantic-release/git
+
+      - name: Generate release notes
+        run: |
+          # Get the last release tag
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+
+          if [[-z "$LAST_TAG"]]; then
+            echo "No previous tags found, creating initial release notes"
+            LAST_TAG="HEAD~10"  # Get last 10 commits if no tags
+          fi
+
+          echo "# Release Notes" > RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "## Changes" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+
+          # Generate changelog from commits
+          git log $LAST_TAG..HEAD --pretty=format:"- %s" --grep="^feat" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "## Bug Fixes" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          git log $LAST_TAG..HEAD --pretty=format:"- %s" --grep="^fix" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "## Documentation" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          git log $LAST_TAG..HEAD --pretty=format:"- %s" --grep="^docs" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "## Other Changes" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          git log $LAST_TAG..HEAD --pretty=format:"- %s" --grep="^chore\|^style\|^refactor" >> RELEASE_NOTES.md
+
+      - name: Determine version bump
+        id: version
+        run: |
+          # Get current version from git tags
+          CURRENT_VERSION=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          CURRENT_VERSION=${CURRENT_VERSION#v}  # Remove 'v' prefix
+
+          # Parse version components
+          IFS='.' read -r major minor patch <<< "$CURRENT_VERSION"
+
+          # Determine version bump type
+          BUMP_TYPE="patch"
+
+          # Check for breaking changes
+          if git log HEAD~10..HEAD --grep="BREAKING CHANGE" --oneline | grep -q .; then
+            BUMP_TYPE="major"
+          # Check for new features
+          elif git log HEAD~10..HEAD --grep="^feat" --oneline | grep -q .; then
+            BUMP_TYPE="minor"
+          # Default to patch for fixes and other changes
+          else
+            BUMP_TYPE="patch"
+          fi
+
+          # Override with manual input if provided
+          if [[-n "${{ github.event.inputs.release_type }}"]]; then
+            BUMP_TYPE="${{ github.event.inputs.release_type }}"
+          fi
+
+          # Calculate new version
+          case $BUMP_TYPE in
+            major)
+              NEW_VERSION="$((major + 1)).0.0"
+              ;;
+            minor)
+              NEW_VERSION="$major.$((minor + 1)).0"
+              ;;
+            patch)
+              NEW_VERSION="$major.$minor.$((patch + 1))"
+              ;;
+          esac
+
+          echo "Current version: $CURRENT_VERSION"
+          echo "Bump type: $BUMP_TYPE"
+          echo "New version: $NEW_VERSION"
+
+          echo "current_version=$CURRENT_VERSION" >> $GITHUB_OUTPUT
+          echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+          echo "bump_type=$BUMP_TYPE" >> $GITHUB_OUTPUT
+
+      - name: Create and push tag
+        run: |
+          NEW_VERSION="${{ steps.version.outputs.new_version }}"
+
+          # Configure git
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          # Create tag
+          git tag -a "v$NEW_VERSION" -m "Release v$NEW_VERSION"
+
+          # Push tag
+          git push origin "v$NEW_VERSION"
+
+      - name: Create GitHub Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: "v${{ steps.version.outputs.new_version }}"
+          release_name: "Release v${{ steps.version.outputs.new_version }}"
+          body_path: RELEASE_NOTES.md
+          draft: false
+          prerelease: false
+
+      - name: Update README with version
+        run: |
+          NEW_VERSION="${{ steps.version.outputs.new_version }}"
+
+          # Update version in README if version badge exists
+          if grep -q "version" README.md; then
+            sed -i "s/version-[0-9]\+\.[0-9]\+\.[0-9]\+/version-$NEW_VERSION/g" README.md
+          fi
+
+          # Update WORKFLOW.md with current date
+          if [[-f "WORKFLOW.md"]]; then
+            sed -i "s/\*\*Última atualização\*\*: .*/\*\*Última atualização\*\*: $(date +'%Y-%m-%d')/g" WORKFLOW.md
+            sed -i "s/\*\*Versão\*\*: .*/\*\*Versão\*\*: $NEW_VERSION/g" WORKFLOW.md
+          fi
+
+          # Update CONTRIBUTING.md with current date
+          if [[-f "CONTRIBUTING.md"]]; then
+            sed -i "s/\*\*Última atualização\*\*: .*/\*\*Última atualização\*\*: $(date +'%Y-%m-%d')/g" CONTRIBUTING.md
+            sed -i "s/\*\*Versão\*\*: .*/\*\*Versão\*\*: $NEW_VERSION/g" CONTRIBUTING.md
+          fi
+
+      - name: Commit version updates
+        run: |
+          git add -A
+          git diff --staged --quiet || git commit -m "chore: update version to ${{ steps.version.outputs.new_version }}"
+          git push origin main
+
+  changelog:
+    runs-on: ubuntu-latest
+    name: Update Changelog
+    needs: release
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate full changelog
+        run: |
+          echo "# Changelog" > CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          echo "Todas as mudanças notáveis neste projeto serão documentadas neste arquivo." >> CHANGELOG.md
+          echo "" >> CHANGELOG.md
+          echo "O formato é baseado em [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)," >> CHANGELOG.md
+          echo "e este projeto adere ao [Semantic Versioning](https://semver.org/spec/v2.0.0.html)." >> CHANGELOG.md
+          echo "" >> CHANGELOG.md
+
+          # Get all tags
+          TAGS=$(git tag -l --sort=-version:refname)
+
+          for tag in $TAGS; do
+            # Get previous tag
+            PREV_TAG=$(git describe --tags --abbrev=0 $tag^ 2>/dev/null || echo "")
+
+            echo "## [$tag] - $(git log -1 --format=%ai $tag | cut -d' ' -f1)" >> CHANGELOG.md
+            echo "" >> CHANGELOG.md
+
+            # Get commits for this tag
+            if [[-n "$PREV_TAG"]]; then
+              RANGE="$PREV_TAG..$tag"
+            else
+              RANGE="$tag"
+            fi
+
+            # Features
+            FEATURES=$(git log $RANGE --pretty=format:"- %s" --grep="^feat" 2>/dev/null || echo "")
+            if [[-n "$FEATURES"]]; then
+              echo "### Added" >> CHANGELOG.md
+              echo "$FEATURES" >> CHANGELOG.md
+              echo "" >> CHANGELOG.md
+            fi
+
+            # Bug fixes
+            FIXES=$(git log $RANGE --pretty=format:"- %s" --grep="^fix" 2>/dev/null || echo "")
+            if [[-n "$FIXES"]]; then
+              echo "### Fixed" >> CHANGELOG.md
+              echo "$FIXES" >> CHANGELOG.md
+              echo "" >> CHANGELOG.md
+            fi
+
+            # Documentation
+            DOCS=$(git log $RANGE --pretty=format:"- %s" --grep="^docs" 2>/dev/null || echo "")
+            if [[-n "$DOCS"]]; then
+              echo "### Documentation" >> CHANGELOG.md
+              echo "$DOCS" >> CHANGELOG.md
+              echo "" >> CHANGELOG.md
+            fi
+
+            # Other changes
+            OTHERS=$(git log $RANGE --pretty=format:"- %s" --grep="^chore\|^style\|^refactor" 2>/dev/null || echo "")
+            if [[-n "$OTHERS"]]; then
+              echo "### Changed" >> CHANGELOG.md
+              echo "$OTHERS" >> CHANGELOG.md
+              echo "" >> CHANGELOG.md
+            fi
+
+            echo "" >> CHANGELOG.md
+          done
+
+      - name: Commit changelog
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+
+          git add CHANGELOG.md
+          git diff --staged --quiet || git commit -m "docs: update changelog"
+          git push origin main

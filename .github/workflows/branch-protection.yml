@@ -1,0 +1,222 @@
+---
+name: Branch Protection Check
+description: Verifica se as regras de proteção de branch estão sendo seguidas
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+
+jobs:
+  branch-protection:
+    runs-on: ubuntu-latest
+    name: Branch Protection Validation
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate branch naming
+        run: |
+          BRANCH_NAME="${{ github.head_ref || github.ref_name }}"
+          echo "Validating branch name: $BRANCH_NAME"
+
+          # Skip validation for main and develop branches
+          if [["$BRANCH_NAME" == "main" || "$BRANCH_NAME" == "develop"]]; then
+            echo "✅ Skipping validation for protected branch: $BRANCH_NAME"
+            exit 0
+          fi
+
+          # Valid branch patterns
+          VALID_PATTERNS=(
+            "^feature/[a-z0-9\-]+$"
+            "^fix/[a-z0-9\-]+$"
+            "^docs/[a-z0-9\-]+$"
+            "^chore/[a-z0-9\-]+$"
+            "^refactor/[a-z0-9\-]+$"
+            "^style/[a-z0-9\-]+$"
+            "^test/[a-z0-9\-]+$"
+            "^perf/[a-z0-9\-]+$"
+            "^hotfix/[a-z0-9\-]+$"
+            "^copilot/[a-z0-9\-]+$"
+          )
+
+          # Check if branch name matches any valid pattern
+          VALID=false
+          for pattern in "${VALID_PATTERNS[@]}"; do
+            if [["$BRANCH_NAME" =~ $pattern]]; then
+              VALID=true
+              echo "✅ Branch name '$BRANCH_NAME' matches pattern: $pattern"
+              break
+            fi
+          done
+
+          if [["$VALID" == false]]; then
+            echo "❌ Invalid branch name: $BRANCH_NAME"
+            echo "Valid patterns:"
+            for pattern in "${VALID_PATTERNS[@]}"; do
+              echo "  - $pattern"
+            done
+            exit 1
+          fi
+
+      - name: Check commit message format
+        if: github.event_name == 'push'
+        run: |
+          # Get the last commit message
+          COMMIT_MSG=$(git log -1 --pretty=format:"%s")
+          echo "Checking commit message: $COMMIT_MSG"
+
+          # Valid commit message patterns
+          VALID_PATTERNS=(
+            "^feat(\(.+\))?: .+"
+            "^fix(\(.+\))?: .+"
+            "^docs(\(.+\))?: .+"
+            "^style(\(.+\))?: .+"
+            "^refactor(\(.+\))?: .+"
+            "^test(\(.+\))?: .+"
+            "^chore(\(.+\))?: .+"
+            "^perf(\(.+\))?: .+"
+            "^ci(\(.+\))?: .+"
+            "^build(\(.+\))?: .+"
+            "^revert(\(.+\))?: .+"
+            "^Merge .+"
+            "^Initial .+"
+            "^Update .+"
+          )
+
+          # Check if commit message matches any valid pattern
+          VALID=false
+          for pattern in "${VALID_PATTERNS[@]}"; do
+            if [["$COMMIT_MSG" =~ $pattern]]; then
+              VALID=true
+              echo "✅ Commit message matches pattern: $pattern"
+              break
+            fi
+          done
+
+          if [["$VALID" == false]]; then
+            echo "❌ Invalid commit message format: $COMMIT_MSG"
+            echo "Valid formats:"
+            echo "  - feat: add new feature"
+            echo "  - fix: fix bug"
+            echo "  - docs: update documentation"
+            echo "  - style: improve styling"
+            echo "  - refactor: refactor code"
+            echo "  - test: add tests"
+            echo "  - chore: maintenance tasks"
+            echo "  - perf: performance improvements"
+            exit 1
+          fi
+
+      - name: Check for direct push to protected branches
+        if: github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop')
+        run: |
+          echo "❌ Direct push to protected branch detected!"
+          echo "Branch: ${{ github.ref }}"
+          echo "Use Pull Requests for changes to main or develop branches."
+          exit 1
+
+      - name: Validate PR requirements
+        if: github.event_name == 'pull_request'
+        run: |
+          PR_TITLE="${{ github.event.pull_request.title }}"
+          PR_BODY="${{ github.event.pull_request.body }}"
+
+          echo "Validating PR requirements..."
+
+          # Check if PR has a title
+          if [[-z "$PR_TITLE"]]; then
+            echo "❌ PR must have a title"
+            exit 1
+          fi
+
+          # Check if PR has a description
+          if [[-z "$PR_BODY"]]; then
+            echo "❌ PR must have a description"
+            exit 1
+          fi
+
+          # Check if PR title follows conventions
+          VALID_PR_PATTERNS=(
+            "^feat(\(.+\))?: .+"
+            "^fix(\(.+\))?: .+"
+            "^docs(\(.+\))?: .+"
+            "^style(\(.+\))?: .+"
+            "^refactor(\(.+\))?: .+"
+            "^test(\(.+\))?: .+"
+            "^chore(\(.+\))?: .+"
+            "^perf(\(.+\))?: .+"
+            "^\[FEATURE\] .+"
+            "^\[BUG\] .+"
+            "^\[DOCS\] .+"
+            "^Add .+"
+            "^Update .+"
+            "^Fix .+"
+            "^Improve .+"
+          )
+
+          VALID=false
+          for pattern in "${VALID_PR_PATTERNS[@]}"; do
+            if [["$PR_TITLE" =~ $pattern]]; then
+              VALID=true
+              echo "✅ PR title matches pattern: $pattern"
+              break
+            fi
+          done
+
+          if [["$VALID" == false]]; then
+            echo "⚠️ PR title doesn't follow conventions but will be allowed"
+            echo "Consider using: feat:, fix:, docs:, etc."
+          fi
+
+          echo "✅ PR requirements validated"
+
+  size-check:
+    runs-on: ubuntu-latest
+    name: PR Size Check
+    if: github.event_name == 'pull_request'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check PR size
+        run: |
+          # Get changed files count
+          CHANGED_FILES=$(git diff --name-only origin/${{ github.base_ref }}...HEAD | wc -l)
+
+          # Get lines added and removed
+          CHANGES=$(git diff --numstat origin/${{ github.base_ref }}...HEAD)
+          LINES_ADDED=$(echo "$CHANGES" | awk '{sum += $1} END {print sum}')
+          LINES_REMOVED=$(echo "$CHANGES" | awk '{sum += $2} END {print sum}')
+
+          # Handle empty values
+          LINES_ADDED=${LINES_ADDED:-0}
+          LINES_REMOVED=${LINES_REMOVED:-0}
+
+          echo "📊 PR Size Analysis:"
+          echo "Files changed: $CHANGED_FILES"
+          echo "Lines added: $LINES_ADDED"
+          echo "Lines removed: $LINES_REMOVED"
+
+          # Define size thresholds
+          LARGE_FILES=20
+          LARGE_LINES=500
+
+          # Check if PR is too large
+          if [[$CHANGED_FILES -gt $LARGE_FILES]]; then
+            echo "⚠️ Large PR detected: $CHANGED_FILES files changed (threshold: $LARGE_FILES)"
+            echo "Consider splitting this PR into smaller ones for easier review."
+          fi
+
+          if [[$LINES_ADDED -gt $LARGE_LINES]]; then
+            echo "⚠️ Large PR detected: $LINES_ADDED lines added (threshold: $LARGE_LINES)"
+            echo "Consider splitting this PR into smaller ones for easier review."
+          fi
+
+          # Always pass, just warn
+          echo "✅ PR size check completed"

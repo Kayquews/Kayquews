@@ -1,0 +1,71 @@
+---
+name: Quality Check
+description: Verifica a qualidade do código e markdown
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+
+jobs:
+  lint-markdown:
+    runs-on: ubuntu-latest
+    name: Lint Markdown
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install markdownlint
+        run: npm install -g markdownlint-cli
+
+      - name: Lint Markdown files
+        run: |
+          markdownlint README.md --config .markdownlint.json || true
+        continue-on-error: true
+
+  spell-check:
+    runs-on: ubuntu-latest
+    name: Spell Check
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check spelling
+        uses: crate-ci/typos@master
+        with:
+          config: .typos.toml
+        continue-on-error: true
+
+  link-check:
+    runs-on: ubuntu-latest
+    name: Check Links
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check links in README
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          config-file: '.github/mlc_config.json'
+        continue-on-error: true
+
+  validate-yaml:
+    runs-on: ubuntu-latest
+    name: Validate YAML
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate YAML files
+        uses: ibiqlik/action-yamllint@v3
+        with:
+          config_file: .yamllint.yml
+        continue-on-error: true
