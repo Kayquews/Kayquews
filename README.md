@@ -2,6 +2,8 @@
   <img src="Img/avatar.svg" width="220" alt="Desenvolvedor no escuro" align="center" style="background:#22242a; border-radius:12px;"/>
 </p>
 
+---
+
 # Oie, seja bem-vindo(a) 👋
 
 - 🔭 Sou um desenvolvedor apaixonado por tecnologia!
@@ -9,14 +11,14 @@
 - ⚡ Fun fact: Adoro memes e café! ☕
 - 🌱 Atualmente aprendendo mais sobre desenvolvimento web e mobile.
 - 💬 Pergunte-me sobre JavaScript, Python e React!
-
+---
 # Sobre mim
 
 Sou um desenvolvedor entusiasta, sempre em busca de aprender e compartilhar conhecimento.
 Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte dessa mudança. Gosto de trabalhar em
 equipe e adoro desafios que me fazem crescer.
 
----
+-----------
 
 <p>
     <img src="Img/avatar%20(1).svg" alt="Avatar do desenvolvedor">
@@ -36,6 +38,8 @@ equipe e adoro desafios que me fazem crescer.
   <img src="https://img.shields.io/badge/-Node.js-333?style=flat&logo=node.js" alt="Node.js" />
   <img src="https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5" alt="HTML5" />
   <img src="https://img.shields.io/badge/-CSS3-333?style=flat&logo=css3" alt="CSS3" />
+
+-----------
 
 ```js
 const skills = [
