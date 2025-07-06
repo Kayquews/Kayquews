@@ -1,0 +1,27 @@
+# Configuração de labels automáticos para PRs
+documentation:
+  - "*.md"
+  - "docs/**/*"
+
+github-actions:
+  - ".github/**/*"
+
+images:
+  - "*.png"
+  - "*.jpg"
+  - "*.jpeg"
+  - "*.gif"
+  - "*.svg"
+  - "Img/**/*"
+  - "img/**/*"
+
+config:
+  - "*.yml"
+  - "*.yaml"
+  - "*.json"
+  - "*.toml"
+
+profile:
+  - "README.md"
+  - "Img/**/*"
+  - "img/**/*"

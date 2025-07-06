@@ -1,0 +1,23 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": "^https://github.com/.*"
+    },
+    {
+      "pattern": "^https://www.linkedin.com/.*"
+    },
+    {
+      "pattern": "^https://www.instagram.com/.*"
+    },
+    {
+      "pattern": "^https://img.shields.io/.*"
+    },
+    {
+      "pattern": "^https://github-readme-stats.vercel.app/.*"
+    }
+  ],
+  "timeout": "10s",
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackHttpStatus": 200
+}
