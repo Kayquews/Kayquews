@@ -62,37 +62,7 @@ const skills = [
 [![Instagram](https://img.shields.io/badge/-Instagram-181717?style=flat&logo=instagram)](https://www.instagram.com/_kayquexf/)
 
 ---
-
-## 🚀 Workflow de Desenvolvimento
-
-Este repositório implementa um fluxo de trabalho profissional com branches e automação:
-
-### 🌿 Estratégia de Branches
-
-- **`main`**: Branch principal protegida
-- **`develop`**: Branch de desenvolvimento
-- **`feature/*`**: Para novas funcionalidades
-- **`fix/*`**: Para correções de bugs
-- **`docs/*`**: Para documentação
-
-### 🤖 Automação
-
-- ✅ **Verificação de Qualidade**: Lint de Markdown, verificação de links
-- ✅ **Proteção de Branches**: Validação de nomenclatura e commits
-- ✅ **Labels Automáticos**: Categorização de PRs
-- ✅ **Releases Automáticos**: Versionamento semântico
-- ✅ **Snake Animation**: Atualização diária das contribuições
-
-### 📋 Como Contribuir
-
-1. Faça fork do repositório
-2. Crie uma branch: `git checkout -b feature/minha-feature`
-3. Commit suas mudanças: `git commit -m 'feat: adicionar nova feature'`
-4. Push para a branch: `git push origin feature/minha-feature`
-5. Abra um Pull Request
-
-📖 **Leia o [Guia de Contribuição](CONTRIBUTING.md) e [Workflow](WORKFLOW.md) para mais detalhes!**
-
+---
 ---
 
 ## Estatísticas do GitHub
