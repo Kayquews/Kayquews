@@ -3,7 +3,8 @@
 </p>
 
 ---
-
+---
+---
 # Oie, seja bem-vindo(a) 👋
 
 - 🔭 Sou um desenvolvedor apaixonado por tecnologia!
