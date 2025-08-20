@@ -63,7 +63,6 @@ const skills = [
 ## Contato
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-181717?style=flat&logo=linkedin)](https://www.linkedin.com/in/kayque-wallace-da-silva-534806261/)
-[![Instagram](https://img.shields.io/badge/-Instagram-181717?style=flat&logo=instagram)](https://www.instagram.com/_kayquexf/)
 
 ---
 ---
