@@ -15,9 +15,9 @@
 ---
 # Sobre mim
 
-> Sou um desenvolvedor entusiasta, sempre em busca de aprender e compartilhar conhecimento.
+> <p color="blue"> Sou um desenvolvedor entusiasta, sempre em busca de aprender e compartilhar conhecimento.
 Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte dessa mudança. Gosto de trabalhar em
-equipe e adoro desafios que me fazem crescer.
+equipe e adoro desafios que me fazem crescer.</p>
 
 -----------
 
