@@ -32,11 +32,6 @@
 
 ## Tools I know
 
-## Linguagens mais usadas
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kayquews&layout=compact&theme=radical&hide_title=false" width="850" alt="Top Languages"/>
-</div>
 
 <p align="left">
   <img src="Img/ai-robot-assistant.gif" width="220" alt="Robot assistant GIF" align="right"
@@ -51,7 +46,7 @@
   <img src="https://img.shields.io/badge/-Node.js-333?style=flat&logo=node.js" alt="Node.js" />
   <img src="https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5" alt="HTML5" />
   <img src="https://img.shields.io/badge/-CSS3-333?style=flat&logo=css3" alt="CSS3" />
-
+</p>
 -----------
 
 ```js
