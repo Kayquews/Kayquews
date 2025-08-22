@@ -76,5 +76,3 @@ const skills = [
 ## Contato
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-181717?style=flat&logo=linkedin)](https://www.linkedin.com/in/kayque-wallace-da-silva-534806261/)
-
-<img src="https://github.com/Kayquews/Kayquews/blob/output/github-contribution-grid-snake.svg" width="300" align="right" alt="GitHub Contribution Graph"/>
