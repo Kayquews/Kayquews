@@ -57,6 +57,7 @@ const skills = [
     "Node.js",
     "HTML5",
     "CSS3",
+    "PHP",
 ];
 ```
 
