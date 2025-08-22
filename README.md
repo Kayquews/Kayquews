@@ -5,9 +5,11 @@
 ---
 ---
 ---
+## Troféus do GitHub
 
-<img src="https://github-profile-trophy.vercel.app/?username=Kayquews&theme=radical" width="300" align="right" alt="GitHub Trophies"/>
-
+<div align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=Kayquews&theme=radical" width="450" alt="GitHub Trophies"/>
+</div>
 ---
 
 # Oie, seja bem-vindo(a) 👋
