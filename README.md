@@ -5,6 +5,9 @@
 ---
 ---
 ---
+
+<img src="https://github-profile-trophy.vercel.app/?username=Kayquews&theme=radical" width="300" align="right" alt="GitHub Trophies"/>
+
 # Oie, seja bem-vindo(a) 👋
 
 - 🔭 Sou um desenvolvedor apaixonado por tecnologia!
