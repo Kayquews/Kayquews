@@ -5,6 +5,7 @@
 ---
 ---
 ---
+
 ## Troféus do GitHub
 
 <div align="center">
@@ -26,24 +27,35 @@
 
 -----------
 
-## Tools I know
+## 🚀 Projetos em Destaque
+
+- [Bau da Sergipanidade](link) — Breve descrição do projeto, principais tecnologias e impacto.
+- 
+---
+
+## 💻 Tecnologias & Ferramentas
+
+**Frontend:**  
+![React](https://img.shields.io/badge/-React-22242a?logo=react&logoColor=61DAFB) ![Next.js](https://img.shields.io/badge/-Next.js-22242a?logo=next.js&logoColor=white) ![HTML5](https://img.shields.io/badge/-HTML5-22242a?logo=html5) ![CSS3](https://img.shields.io/badge/-CSS3-22242a?logo=css3) ![Tailwind CSS](https://img.shields.io/badge/-Tailwind%20CSS-22242a?logo=tailwind-css)
+
+**Backend:**  
+![Node.js](https://img.shields.io/badge/-Node.js-22242a?logo=node.js) ![PHP](https://img.shields.io/badge/-PHP-22242a?logo=php) ![Python](https://img.shields.io/badge/-Python-22242a?logo=python)
+
+**Databases:**  
+![MySQL](https://img.shields.io/badge/-MySQL-22242a?logo=mysql) ![MongoDB](https://img.shields.io/badge/-MongoDB-22242a?logo=mongodb)  
 
 
-<p align="left">
-  <img src="Img/ai-robot-assistant.gif" width="220" alt="Robot assistant GIF" align="right"
-       style="background:#22242a; border-radius:12px;"/>
-</p>
+**DevTools:**  
+![Git](https://img.shields.io/badge/-Git-22242a?logo=git) ![Docker](https://img.shields.io/badge/-Docker-22242a?logo=docker) ![VS Code](https://img.shields.io/badge/-VS%20Code-22242a?logo=visual-studio-code)  
 
-<p>
-  <img src="https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/-Python-333?style=flat&logo=python" alt="Python" />
-  <img src="https://img.shields.io/badge/-React-333?style=flat&logo=react" alt="React" />
-  <img src="https://img.shields.io/badge/-Next.js-333?style=flat&logo=next.js" alt="Next.js" />
-  <img src="https://img.shields.io/badge/-Tailwind%20CSS-333?style=flat&logo=tailwind-css" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/-Node.js-333?style=flat&logo=node.js" alt="Node.js" />
-  <img src="https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5" alt="HTML5" />
-  <img src="https://img.shields.io/badge/-CSS3-333?style=flat&logo=css3" alt="CSS3" />
-</p>
+
+**Cloud/Deploy:**  
+![Vercel](https://img.shields.io/badge/-Vercel-22242a?logo=vercel) ![Netlify](https://img.shields.io/badge/-Netlify-22242a?logo=netlify)  
+
+---
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Kayquews&theme=dark)
+![Profile views](https://komarev.com/ghpvc/?username=Kayquews&color=brightgreen)
+
 
 ```js
 const skills = [
@@ -65,19 +77,6 @@ const skills = [
 <p align="center" style="background:#22242a; border-radius:12px;" >
   <img src="./output/github-contribution-grid-snake.svg" alt="snake gif" width="800" align="center"/>
 </p>
-
-## 📊 Análise do Perfil
-
-> **Pontuação**: 4.55/5 (91%) - Top 10% dos perfis GitHub
-
-Quer saber como seu perfil se compara? Confira a [**análise completa do perfil**](./PROFILE_ANALYSIS.md) com:
-
-- ✅ **Avaliação detalhada** de completude e qualidade
-- 📈 **Métricas e estatísticas** de performance
-- 🎯 **Recomendações personalizadas** para melhoria
-- 🏆 **Scorecard comparativo** por categorias
-
-[![Análise Completa](https://img.shields.io/badge/📊%20Análise-Completa-brightgreen?style=for-the-badge)](./PROFILE_ANALYSIS.md)
 
 ---
 
