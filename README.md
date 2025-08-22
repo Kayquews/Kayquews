@@ -8,7 +8,7 @@
 ## Troféus do GitHub
 
 <div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=Kayquews&theme=radical" width="850" alt="GitHub Trophies"/>
+  <img src="https://github-profile-trophy.vercel.app/?username=Kayquews&theme=darkhub&row=2&column=4" width="850" alt="GitHub Trophies"/>
 </div>
 
 
