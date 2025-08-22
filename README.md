@@ -63,10 +63,8 @@ const skills = [
 ## Snake das Contribuições
 
 <p align="center" style="background:#22242a; border-radius:12px;" >
-  <img src="./output/github-contribution-grid-snake.svg" alt="snake gif" width="800" align="right"/>
+  <img src="./output/github-contribution-grid-snake.svg" alt="snake gif" width="800" align="center"/>
 </p>
-
----
 
 ## Contato
 
