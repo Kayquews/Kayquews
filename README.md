@@ -38,11 +38,12 @@
        style="background:#22242a; border-radius:12px;"/>
 </p>
 
-
 <p>
   <img src="https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript" alt="JavaScript" />
   <img src="https://img.shields.io/badge/-Python-333?style=flat&logo=python" alt="Python" />
   <img src="https://img.shields.io/badge/-React-333?style=flat&logo=react" alt="React" />
+  <img src="https://img.shields.io/badge/-Next.js-333?style=flat&logo=next.js" alt="Next.js" />
+  <img src="https://img.shields.io/badge/-Tailwind%20CSS-333?style=flat&logo=tailwind-css" alt="Tailwind CSS" />
   <img src="https://img.shields.io/badge/-Node.js-333?style=flat&logo=node.js" alt="Node.js" />
   <img src="https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5" alt="HTML5" />
   <img src="https://img.shields.io/badge/-CSS3-333?style=flat&logo=css3" alt="CSS3" />
