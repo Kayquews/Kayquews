@@ -32,6 +32,8 @@
 
 ## Tools I know
 
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Kayquews&layout=compact&theme=radical" width="300" align="right" alt="Top Languages"/>
+
 
 <p align="left">
   <img src="Img/ai-robot-assistant.gif" width="220" alt="Robot assistant GIF" align="right"
