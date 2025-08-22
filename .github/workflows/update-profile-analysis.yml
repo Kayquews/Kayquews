@@ -1,0 +1,44 @@
+name: Update Profile Analysis
+
+on:
+  schedule:
+    # Executa toda segunda-feira às 09:00 UTC (06:00 BRT)
+    - cron: '0 9 * * 1'
+  workflow_dispatch: # Permite execução manual
+
+jobs:
+  update-analysis:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Update analysis timestamp
+      run: |
+        # Configurar git
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Executar script de atualização
+        chmod +x scripts/update-analysis.sh
+        ./scripts/update-analysis.sh
+        
+        # Verificar se houve mudanças
+        if git diff --quiet; then
+          echo "Nenhuma mudança detectada"
+        else
+          echo "Atualizando análise do perfil..."
+          git add PROFILE_ANALYSIS.md
+          git commit -m "🤖 chore: atualizar timestamp da análise do perfil"
+          git push
+        fi
+        
+    - name: Create summary
+      run: |
+        echo "## 📊 Análise do Perfil Atualizada" >> $GITHUB_STEP_SUMMARY
+        echo "A análise do perfil foi atualizada com sucesso!" >> $GITHUB_STEP_SUMMARY
+        echo "- 📅 **Data**: $(date '+%d/%m/%Y às %H:%M')" >> $GITHUB_STEP_SUMMARY
+        echo "- 🔗 **Ver análise**: [PROFILE_ANALYSIS.md](./PROFILE_ANALYSIS.md)" >> $GITHUB_STEP_SUMMARY
