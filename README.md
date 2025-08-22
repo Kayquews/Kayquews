@@ -22,9 +22,7 @@
 ---
 # Sobre mim
 
-> Sou um desenvolvedor entusiasta, sempre em busca de aprender e compartilhar conhecimento.
-Acredito que a tecnologia pode transformar o mundo e estou aqui para fazer parte dessa mudança. Gosto de trabalhar em
-equipe e adoro desafios que me fazem crescer.
+> Sou desenvolvedor full stack, focado em construir soluções eficientes com React, PHP e Python. Busco aprimorar continuamente minhas habilidades, colaborando em projetos desafiadores e entregando resultados de qualidade. Valorizo o trabalho em equipe e estou sempre aberto a aprender novas tecnologias e compartilhar conhecimento.
 
 -----------
 
