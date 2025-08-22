@@ -26,10 +26,6 @@
 
 -----------
 
-<p>
-    <img src="Img/avatar%20(1).svg" alt="Avatar do desenvolvedor">
-</p>
-
 ## Tools I know
 
 
