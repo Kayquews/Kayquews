@@ -26,11 +26,13 @@ equipe e adoro desafios que me fazem crescer.
 </p>
 
 ## Tools I know
+--
 
 <p align="left">
   <img src="Img/ai-robot-assistant.gif" width="220" alt="Robot assistant GIF" align="right"
        style="background:#22242a; border-radius:12px;"/>
 </p>
+
 
 <p>
   <img src="https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript" alt="JavaScript" />
@@ -52,6 +54,9 @@ const skills = [
     "CSS3",
 ];
 ```
+
+---
+---
 
 ## Snake das Contribuições
 
