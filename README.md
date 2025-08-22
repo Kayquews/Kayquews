@@ -66,6 +66,21 @@ const skills = [
   <img src="./output/github-contribution-grid-snake.svg" alt="snake gif" width="800" align="center"/>
 </p>
 
+## 📊 Análise do Perfil
+
+> **Pontuação**: 4.55/5 (91%) - Top 10% dos perfis GitHub
+
+Quer saber como seu perfil se compara? Confira a [**análise completa do perfil**](./PROFILE_ANALYSIS.md) com:
+
+- ✅ **Avaliação detalhada** de completude e qualidade
+- 📈 **Métricas e estatísticas** de performance
+- 🎯 **Recomendações personalizadas** para melhoria
+- 🏆 **Scorecard comparativo** por categorias
+
+[![Análise Completa](https://img.shields.io/badge/📊%20Análise-Completa-brightgreen?style=for-the-badge)](./PROFILE_ANALYSIS.md)
+
+---
+
 ## Contato
 
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-181717?style=flat&logo=linkedin)](https://www.linkedin.com/in/kayque-wallace-da-silva-534806261/)
