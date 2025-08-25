@@ -2,9 +2,24 @@
   <img src="Img/avatar.svg" width="220" alt="Desenvolvedor no escuro" align="center" style="background:#22242a; border-radius:12px;"/>
 </p>
 
----
----
----
+##
+
+<h2 align="center">Kayquews • Full Stack Developer 🚀</h2>
+<p align="center">
+  <b>React • Python • PHP</b><br>
+  Interfaces modernas, APIs RESTful, automação e boas práticas.<br>
+  <a href="mailto:seuemail@exemplo.com">
+    <img src="https://img.shields.io/badge/email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://linkedin.com/in/seuusuario">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://github.com/Kayquews">
+    <img src="https://img.shields.io/badge/GitHub-333?style=for-the-badge&logo=github&logoColor=white" />
+  </a>
+</p>
+
+##
 
 ## Troféus do GitHub
 
