@@ -91,7 +91,3 @@ const skills = [
 </p>
 
 ---
-
-## Contato
-
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-181717?style=flat&logo=linkedin)](https://www.linkedin.com/in/kayque-wallace-da-silva-534806261/)
